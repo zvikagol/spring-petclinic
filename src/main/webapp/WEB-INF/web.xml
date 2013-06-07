@@ -27,9 +27,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <param-value>classpath:spring/business-config.xml, classpath:spring/tools-config.xml</param-value>
     </context-param>
 
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
 
     <!--
 - Servlet that dispatches request to registered handlers (Controller implementations).
@@ -43,6 +40,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
     <servlet-mapping>
         <servlet-name>petclinic</servlet-name>
@@ -60,6 +61,20 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         <servlet-name>datatablesController</servlet-name>
         <url-pattern>/datatablesController/*</url-pattern>
     </servlet-mapping>
+
+
+
+	<!-- Dandelion-Datatables servlet definition -->
+	<servlet>
+	    <servlet-name>dandelionAssets</servlet-name>
+	    <servlet-class>com.github.dandelion.extras.servlet2.asset.web.AssetsServlet2</servlet-class>
+	</servlet>
+
+	<!-- Dandelion-Datatables servlet mapping -->
+	<servlet-mapping>
+	    <servlet-name>dandelionAssets</servlet-name>
+	    <url-pattern>/dandelion-assets/*</url-pattern>
+	</servlet-mapping>
 
     <!-- used so we can use forms of method type 'PUT' and 'DELETE' (such as in the Pet form)
 see here: http://static.springsource.org/spring/docs/current/spring-framework-reference/html/view.html#rest-method-conversion

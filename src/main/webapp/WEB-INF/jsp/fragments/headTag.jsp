@@ -1,4 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
+<%@ taglib prefix="webanalytics" uri="http://github.com/dandelion/webanalytics" %>
+<%@ taglib prefix="dandelion" uri="http://github.com/dandelion" %>
 
 <!--
 PetClinic :: a Spring Framework demonstration
@@ -23,6 +25,9 @@ PetClinic :: a Spring Framework demonstration
 
     <spring:url value="/webjars/jquery-ui/1.9.2/css/smoothness/jquery-ui-1.9.2.custom.css" var="jQueryUiCss"/>
     <link href="${jQueryUiCss}" rel="stylesheet"></link>
+    
+    <webanalytics:tracker provider="google" token="oBOzU3a7PMunfqZl7RhmxVs3aYvXheYHC6hlWDbJbhE"/>
+    <dandelion:assets />
 </head>
 
 
