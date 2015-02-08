@@ -9,7 +9,7 @@
 
 ## Running petclinic locally
 ```
-	git clone https://github.com/SpringSource/spring-petclinic.git
+	git clone https://github.com/SpringSource/spring-petclinic.git  
 	mvn tomcat7:run
 ```
 
