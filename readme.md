@@ -20,7 +20,7 @@ Our issue tracker is available here: https://github.com/SpringSource/spring-petc
 
 ## Working with Petclinic in Eclipse/STS
 
-### prerequisites
+### prerequisites   
 The following items should be installed in your system:
 * Maven 3 (http://www.sonatype.com/books/mvnref-book/reference/installation.html)
 * git command line tool (https://help.github.com/articles/set-up-git)
